@@ -11,8 +11,8 @@ using TaskManagerMVC.DataAccess;
 namespace TaskManagerMVC.Migrations
 {
     [DbContext(typeof(TMDBContext))]
-    [Migration("20220218113601_Init")]
-    partial class Init
+    [Migration("20220307162307_initial")]
+    partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

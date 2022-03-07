@@ -11,8 +11,7 @@ namespace TaskManagerMVC.Repositories
         {
             _context = context;
         }
-        public TaskModel Get(int taskId)
-       => _context.Tasks.SingleOrDefault(x => x.TaskId == taskId);
+        public TaskModel Get(int taskId) => _context.Tasks.SingleOrDefault(x => x.TaskId == taskId);
 
         public void Add(TaskModel task)
         {
@@ -42,7 +41,7 @@ namespace TaskManagerMVC.Repositories
             }
         }
 
-        public IQueryable<TaskModel> GetAllActive()
+        public IEnumerable<TaskModel> GetAllActive()
         => _context.Tasks.Where(x => !x.Done);
 
     }
